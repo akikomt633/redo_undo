@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>redo_undo</title>
+  </head>
+  <body>
+    <div>
+      <table>
+        <tr>
+        <td>
+          <form id="radio_form">
+            <label><input type="radio" name="radio" value="draw" checked>作成</label>
+            <label><input type="radio" name="radio" value="select">選択</label>
+          </form>   
+        </td>
+        <td>
+          <input type="button" value="削除" id="delete" onclick="deleteButtonClick()">
+          <input type="button" value="元に戻す" id="undo" onclick="undoButtonClick()" disabled>
+          <input type="button" value="やり直し" id="redo" onclick="redoButtonClick()" disabled>
+        </td>
+        </tr>
+        </table>      
+    </div>    
+    <canvas id="canvas" width="600" height="400"></canvas>
+    <style>
+        canvas {
+            border: 1px solid silver;
+        }
+        </style>
+    <script src="script.js"></script>
+  </body>
+</html>
